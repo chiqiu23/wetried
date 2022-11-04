@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 # wetried 
 
-Names: Chi Qiu and Meaghan Brennan
+Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
