@@ -232,5 +232,9 @@ dat <- df[-1, ] %>%
   slice_head(n=17)
 data_full <- rbind(dat,data_full)
 
+#fix player names col
+data_full <- data_full %>%
+  mutate(player = sapply(str_split(player, "  "), "[[", 1))
+
 write.csv(data_full, "smith_wbb_data.csv", row.names= FALSE)
 
