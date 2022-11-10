@@ -37,7 +37,7 @@ You can install the development version of wetried2 like so:
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(wetried)
+library(wetried2)
 ## basic example code
 ```
 

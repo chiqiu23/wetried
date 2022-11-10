@@ -4,16 +4,18 @@ library(tidyverse)
 library(janitor)
 library(rvest)
 library(RSelenium)
+library(robotstxt)
 
 ## run these in your console first to load Selenium server in Google Chrome
 # rD <- RSelenium::rsDriver()
 # remDr <- rD[["client"]]
 
 #check if allowed to scrape
-#paths_allowed("https://smithpioneers.com/sports/womens-basketball/stats/2010-11") #TRUE , all good
+paths_allowed("https://smithpioneers.com/sports/womens-basketball/stats/2010-11") #TRUE , all good
 
 ## 2010-11 SEASON
 #opens site in server
+remDr$open()
 remDr$navigate("https://smithpioneers.com/sports/womens-basketball/stats/2010-11")
 # Give some time to load
 Sys.sleep(4)
