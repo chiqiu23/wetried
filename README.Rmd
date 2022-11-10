@@ -13,13 +13,14 @@ knitr::opts_chunk$set(
 )
 ```
 
-# wetried 
+# wetried
 
 Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
+
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
+
 <!-- badges: end -->
 
 The goal of wetried is to ...
@@ -28,23 +29,25 @@ The goal of wetried is to ...
 
 You can install the development version of wetried2 like so:
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```{r}
+devtools::install_github("chiqiu23/wetried")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Load
 
 ```{r example}
 library(wetried2)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Available Tables
 
-```{r cars}
-summary(cars)
+-   `smith_wbb_data`: dataset of Smith College women basketball games
+
+```{r wbb_data}
+library(readr)
+smith_wbb_data <- read_csv("smith_wbb_data.csv")
+head(smith_wbb_data)
 ```
 
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
