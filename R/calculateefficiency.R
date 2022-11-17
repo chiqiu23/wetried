@@ -10,9 +10,6 @@
 #' calc_efficiency(20, 17, 2)
 #'
 #'
-#' pts x 2tsa
-#' tsa = fga + 0.44 x fta
-#'
 
 calc_efficiency <- function(pts, fga, fta) {
   100 * (pts/((2 * fga) + (0.88 * fta)))
