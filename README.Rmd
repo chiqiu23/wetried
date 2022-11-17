@@ -41,7 +41,7 @@ library(wetried2)
 ## basic example code
 ```
 
-## Available Tables
+## Available Tables 
 
 -   `smith_wbb_data`: dataset of Smith College women basketball games
 
