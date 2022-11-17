@@ -13,27 +13,28 @@ knitr::opts_chunk$set(
 )
 ```
 
-# wetried
+# wetried 
 
 Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 <!-- badges: start -->
-
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
-
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
 <!-- badges: end -->
 
-The goal of wetried is to ...
+The goal of wetried is to be a Smith College version of the nbastatr package -- with it, you can see the Smith College basketball team's stats and calculate various advanced stats and other important numbers for anyone with an interest in basketball stats.
 
 ## Installation
 
 You can install the development version of wetried2 like so:
 
-```{r}
+``` {r}
 devtools::install_github("chiqiu23/wetried")
 ```
 
-## Load
+## Example
+
+This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(wetried2)
@@ -44,7 +45,7 @@ library(wetried2)
 
 -   `smith_wbb_data`: dataset of Smith College women basketball games
 
-```{r wbb_data}
+```{r wbb data}
 library(readr)
 smith_wbb_data <- read_csv("smith_wbb_data.csv")
 head(smith_wbb_data)
@@ -55,7 +56,7 @@ You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-da
 You can also embed plots, for example:
 
 ```{r pressure, echo = FALSE}
-plot(pressure)
+plot()
 ```
 
 In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
