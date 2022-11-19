@@ -238,5 +238,9 @@ data_full <- rbind(dat,data_full)
 data_full <- data_full %>%
   mutate(player = sapply(str_split(player, "  "), "[[", 1))
 
-write.csv(data_full, "smith_wbb_data.csv", row.names= FALSE)
+#fix player names col try 2 - remove extra "\r\n" at end of strings in player col
+data_full <- data_full |>
+  mutate(player = gsub("[\r\n]", "", player))
+
+write.csv(data_full, "data-raw/smith_wbb_data.csv", row.names= FALSE)
 
