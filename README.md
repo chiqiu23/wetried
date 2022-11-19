@@ -14,28 +14,55 @@ status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.o
 
 <!-- badges: end -->
 
-The goal of wetried is to …
+## Purpose
+
+The goal of `wetried` package is to be a Smith College version of the
+nbastatr package – with it, you can see the Smith College basketball
+team’s stats and calculate various advanced stats and any important
+numbers that are useful for evaluating the performance of a basketball
+game.
+
+## Target Audience
+
+Anyone who is interested in analyzing the performance of Smith College
+basketball games. This package also provides a useful way for coaches to
+learn more about the team and how to improve it.
 
 ## Installation
 
-You can install the development version of wetried2 like so:
+You can install IPEDS from [CRAN](https://cran.r-project.org/) with:
 
 ``` r
+#install.packages("wetried2")
+```
+
+You can install the development version of wetried2 from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
 devtools::install_github("chiqiu23/wetried")
-#> Skipping install of 'wetried2' from a github remote, the SHA1 (0774cdcf) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo chiqiu23/wetried@HEAD
+#> * checking for file ‘/private/var/folders/bp/j7r3nznd45z5cjjfx14h0snc0000gp/T/RtmpVnqS8N/remotesa4eb1649d8ed/chiqiu23-wetried-7488438/DESCRIPTION’ ... OK
+#> * preparing ‘wetried2’:
+#> * checking DESCRIPTION meta-information ... OK
+#> * checking for LF line-endings in source and make files and shell scripts
+#> * checking for empty or unneeded directories
+#> * building ‘wetried2_0.0.0.9000.tar.gz’
 ```
 
 ## Load
 
 ``` r
-library(wetried2)
-## basic example code
+library(wetried2) 
 ```
 
 ## Available Tables
 
--   `smith_wbb_data`: dataset of Smith College women basketball games
+-   `smith_wbb_data`: dataset of Smith College Women Basketball Games
+    for 2010-2022 season
+
+## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game
 
 ``` r
 library(readr)
@@ -64,15 +91,14 @@ head(smith_wbb_data)
 #> #   variable names ¹​fg_percent, ²​x3pt_percent
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+### Data Visualization
 
-You can also embed plots, for example:
+### Functionality
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+## Contributors
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+-   [Chi Qiu](https://github.com/chiqiu23)
+
+-   [Meaghan Brennan](https://github.com/teenyss)
+
+-   [Emma Gardecki](https://github.com/emmagardecki)
