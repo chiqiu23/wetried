@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # wetried
 
 Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
- 
+
 <!-- badges: start -->
 
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
@@ -33,7 +33,7 @@ Anyone who is interested in analyzing the performance of Smith College basketbal
 
 ## Installation
 
-You can install IPEDS from [CRAN](https://cran.r-project.org/) with: 
+You can install IPEDS from [CRAN](https://cran.r-project.org/) with:
 
 ```{r}
 #install.packages("wetried2")
@@ -56,13 +56,13 @@ library(wetried2)
 
 -   `smith_wbb_data`: dataset of Smith College Women Basketball Games for 2010-2022 season
 
-## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game 
+## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game
 
 ```{r wbb data}
 head(smith_wbb_data)
 ```
 
-### Data Visualization 
+### Data Visualization
 
 ```{r pressure, echo = FALSE}
 #smith_wbb_example <- smith_wbb_data |> 
@@ -73,7 +73,9 @@ head(smith_wbb_data)
   #geom_bar()
 ```
 
-### Functionality
+### Efficiency Calculation
+
+## Project Proposals for Phase III
 
 ## Contributors
 
