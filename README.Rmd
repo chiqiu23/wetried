@@ -59,8 +59,6 @@ library(wetried2)
 ## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game 
 
 ```{r wbb data}
-library(readr)
-smith_wbb_data <- read_csv("smith_wbb_data.csv")
 head(smith_wbb_data)
 ```
 
