@@ -25,11 +25,11 @@ Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 ## Purpose
 
-The goal of `wetried` package is to be a Smith College version of the nbastatr package -- with it, you can see the Smith College basketball team's stats and calculate various advanced stats and any important numbers that are useful for evaluating the performance of a basketball game.
+The purpose of `wetried` package is to be a Smith College basketball version of the nbastatr package, but in a simpler form. It uses the season totals as provided on the Smith Athletics website and will all for users to calculate advanced stats on their own, such as TS%. With it, you can see the Smith College basketball team's stats and calculate various advanced stats and any important numbers that are useful for evaluating the performance of a basketball game.
 
 ## Target Audience
 
-Anyone who is interested in analyzing the performance of Smith College basketball games. This package also provides a useful way for coaches to learn more about the team and how to improve it.
+Users who may be interested in this package would be anyone interested in Smith College's basketball team, as well as anyone interested in sports analytics and specifically basketball analytics. This package also provides a useful way for coaches to learn more about the team and how to improve it.
 
 ## Installation
 
