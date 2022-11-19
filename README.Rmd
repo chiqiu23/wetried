@@ -13,37 +13,50 @@ knitr::opts_chunk$set(
 )
 ```
 
-# wetried 
+# wetried
 
 Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
-
+ 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
+
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
+
 <!-- badges: end -->
 
-The goal of wetried is to be a Smith College version of the nbastatr package -- with it, you can see the Smith College basketball team's stats and calculate various advanced stats and other important numbers for anyone with an interest in basketball stats.
+## Purpose
+
+The goal of `wetried` package is to be a Smith College version of the nbastatr package -- with it, you can see the Smith College basketball team's stats and calculate various advanced stats and any important numbers that are useful for evaluating the performance of a basketball game.
+
+## Target Audience
+
+Anyone who is interested in analyzing the performance of Smith College basketball games. This package also provides a useful way for coaches to learn more about the team and how to improve it.
 
 ## Installation
 
-You can install the development version of wetried2 like so:
+You can install IPEDS from [CRAN](https://cran.r-project.org/) with: 
 
-``` {r}
+```{r}
+#install.packages("wetried2")
+```
+
+You can install the development version of wetried2 from [GitHub](https://github.com/) with:
+
+```{r}
+# install.packages("devtools")
 devtools::install_github("chiqiu23/wetried")
 ```
 
-## Example 
+## Load
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(wetried2)
-## basic example code
+```{r load}
+library(wetried2) 
 ```
 
-## Available Tables 
+## Available Tables
 
--   `smith_wbb_data`: dataset of Smith College women basketball games
+-   `smith_wbb_data`: dataset of Smith College Women Basketball Games for 2010-2022 season
+
+## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game 
 
 ```{r wbb data}
 library(readr)
@@ -51,12 +64,23 @@ smith_wbb_data <- read_csv("smith_wbb_data.csv")
 head(smith_wbb_data)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
+### Data Visualization 
 
 ```{r pressure, echo = FALSE}
-plot()
+#smith_wbb_example <- smith_wbb_data |> 
+  #filter(number == "10"| number == "22", season == "2021-22")
+#view(smith_wbb_example) 
+
+#ggplot(smith_wbb_example, mapping = aes(x = player, fill = fgm))+
+  #geom_bar()
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+### Functionality
+
+## Contributors
+
+-   [Chi Qiu](https://github.com/chiqiu23)
+
+-   [Meaghan Brennan](https://github.com/teenyss)
+
+-   [Emma Gardecki](https://github.com/emmagardecki)
