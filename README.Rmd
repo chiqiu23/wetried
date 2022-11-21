@@ -25,7 +25,7 @@ Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 ## Purpose
 
-The purpose of `wetried` package is to be a Smith College basketball version of the nbastatr package, but in a simpler form. It uses the season totals as provided on the Smith Athletics website and will all for users to calculate advanced stats on their own, such as TS%. With it, you can see the Smith College basketball team's stats and calculate various advanced stats and any important numbers that are useful for evaluating the performance of a basketball game.
+The purpose of `wetried` package is to be a Smith College basketball version of the nbastatr package, but in a simpler form. It uses the season totals as provided on the Smith Athletics website and will all for users to calculate advanced stats on their own, such as TS%, and provide visualizations for analysis.
 
 ## Target Audience
 
@@ -52,9 +52,14 @@ devtools::install_github("chiqiu23/wetried")
 library(wetried2) 
 ```
 
-## Available Tables
+## Available Datasets
 
 -   `smith_wbb_data`: dataset of Smith College Women Basketball Games for 2010-2022 season
+
+## Available functions
+
+-   `TS_percentage`: calculate TS% or True Shooting Percentage from the Smith WBB dataset.
+-   `perform_players`: compare field goals attempted of players in one season
 
 ## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game
 
@@ -62,20 +67,21 @@ library(wetried2)
 head(smith_wbb_data)
 ```
 
-### Data Visualization
-
-```{r pressure, echo = FALSE}
-#smith_wbb_example <- smith_wbb_data |> 
-  #filter(number == "10"| number == "22", season == "2021-22")
-#view(smith_wbb_example) 
-
-#ggplot(smith_wbb_example, mapping = aes(x = player, fill = fgm))+
-  #geom_bar()
-```
-
 ### Efficiency Calculation
 
+```{r}
+TS_percentage("Bondi, Lauren", "2018-19")
+```
+
+### Data Visualization
+
+```{r}
+perform_players(10, 22, "2021-22")
+```
+
 ## Project Proposals for Phase III
+
+In the project phase III, we will add more Smith College basketball team's data and calculate more advanced stats and any important numbers that are useful for evaluating the performance of a basketball game. Additionally, we will build more functions that analyze and visualize the important stats we generated.
 
 ## Contributors
 

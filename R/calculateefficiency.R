@@ -5,14 +5,14 @@
 #' @return The true shooting percentage of `input_player` in `input_season`.
 #'
 #' @examples
-#' calc_efficiency(player = "Bondi, Lauren", season = "2018-19)
+#' TS_percentage(player = "Bondi, Lauren", season = "2018-19")
 #' input_player <- "Dornbusch, Abby"
 #' input_season <- "2010-11"
-#' calc_efficiency(input_player, input_season)
+#' TS_percentage(input_player, input_season)
 
 
-#base statistic structure
-# calc_efficiency <- function(pts, fga, fta) {
+# base statistic structure
+# TS_percentage <- function(pts, fga, fta) {
 #   100 * (pts/((2 * fga) + (0.88 * fta)))
 # }
 
