@@ -25,7 +25,7 @@ Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 ## Purpose
 
-The purpose of `wetried` package is to be a Smith College basketball version of the nbastatr package, but in a simpler form. It uses the season totals as provided on the Smith Athletics website and will all for users to calculate advanced stats on their own, such as TS%, and provide visualizations for analysis.
+The purpose of `wetried2` package is to be a Smith College basketball version of the nbastatr package, but in a simpler form. It uses the season totals as provided on the Smith Athletics website and will all for users to calculate advanced stats on their own, such as TS%, and provide visualizations for analysis.
 
 ## Target Audience
 
@@ -33,13 +33,13 @@ Users who may be interested in this package would be anyone interested in Smith 
 
 ## Installation
 
-You can install IPEDS from [CRAN](https://cran.r-project.org/) with:
+You can install `wetried2` from [CRAN](https://cran.r-project.org/) with:
 
 ```{r}
 #install.packages("wetried2")
 ```
 
-You can install the development version of wetried2 from [GitHub](https://github.com/) with:
+You can install the development version of `wetried2` from [GitHub](https://github.com/) with:
 
 ```{r}
 # install.packages("devtools")
