@@ -59,7 +59,7 @@ library(wetried2)
 ## Available functions
 
 -   `TS_percentage`: calculate TS% or True Shooting Percentage from the Smith WBB dataset.
--   `perform_players`: compare field goals attempted of players in one season
+-   `perform_players`: compare field goals attempted for two selected players across one season
 
 ## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game
 
@@ -70,13 +70,13 @@ head(smith_wbb_data)
 ### Efficiency Calculation
 
 ```{r}
-TS_percentage("Bondi, Lauren", "2018-19")
+TS_percentage(input_player = "Bondi, Lauren", input_season = "2018-19")
 ```
 
 ### Data Visualization
 
 ```{r}
-perform_players(10, 22, "2021-22")
+perform_players(playernum1 = 10, playernum2 = 22, input_season = "2021-22")
 ```
 
 ## Project Proposals for Phase III

@@ -35,6 +35,7 @@
 \item{blk}{Blocks}
 \item{season}{Season Year}
 }
+}
 \source{
 \code{smith_wbb_data} comes from the \href{https://smithpioneers.com/sports/womens-basketball/stats/2010-11}{Smith College Pioneers Basketball Statistics page}
 }

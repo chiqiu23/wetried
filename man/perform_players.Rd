@@ -7,11 +7,11 @@
 perform_players(player_num1, player_num2, input_season)
 }
 \arguments{
-\item{player_num1}{The number of the player1}
+\item{player_num1}{The number of the first player of interest}
 
-\item{player_num2}{The number of the player2}
+\item{player_num2}{The number of the second player of interest}
 
-\item{input_season}{The season of the basketball game}
+\item{input_season}{The season of interest from the dataset}
 }
 \value{
 A bar graph that compares performance of \code{player1}'s performance with \code{player2}'s on field goals attempted in one \code{season}
@@ -20,6 +20,5 @@ A bar graph that compares performance of \code{player1}'s performance with \code
 Compare field goals attempted of players in one season
 }
 \examples{
-#perform_players(10, 22, "2021-22")
-
+perform_players(10, 22, "2021-22")
 }
