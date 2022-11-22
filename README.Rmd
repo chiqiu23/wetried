@@ -60,6 +60,7 @@ library(wetried2)
 
 -   `TS_percentage()`: calculate TS% or True Shooting Percentage from the Smith WBB dataset.
 -   `perform_players()`: compare field goals attempted for two selected players across one season
+-   `ast_turnover_ratio()`: calculate the assist to turnover ratio of a player from the Smith WBB dataset.
 
 ## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game
 
