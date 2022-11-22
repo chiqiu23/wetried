@@ -52,6 +52,7 @@ devtools::install_github("chiqiu23/wetried")
 ``` r
 library(wetried2) 
 #> Loading required package: ggplot2
+#> Warning: package 'ggplot2' was built under R version 4.2.2
 #> Loading required package: dplyr
 #> 
 #> Attaching package: 'dplyr'
@@ -103,13 +104,20 @@ TS_percentage(input_player = "Bondi, Lauren", input_season = "2018-19")
 #> [1] 56.037
 ```
 
+### Assist to Turnover Ratio Calculation
+
+``` r
+ast_turnover_ratio(input_player = "Pickunka, Katelyn", input_season = "2021-22")
+#> [1] 0.462963
+```
+
 ### Data Visualization
 
 ``` r
 perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ## Project Proposals for Phase III
 
