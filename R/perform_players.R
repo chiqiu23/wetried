@@ -9,7 +9,7 @@
 #' @return A bar graph that compares performance of `player1`'s performance with `player2`'s on field goals attempted in one `season`
 #'
 #' @examples
-#' perform_players(10, 22, "2021-22")
+#' #perform_players(10, 22, "2021-22")
 #'
 #' @import dplyr
 #' @import ggplot2
