@@ -54,7 +54,7 @@ library(wetried2)
 
 ## Available Datasets
 
--   `smith_wbb_data`: dataset of Smith College Women Basketball Games for 2010-2022 season
+-   `smith_wbb_data`: dataset of Smith College Women Basketball Games for 2010-2022 season (with exception for the 2019-2020 season that was disrupted by the Covid-19 Pandemic)
 
 ## Available functions
 
