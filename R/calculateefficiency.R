@@ -3,6 +3,7 @@
 #' @param input_player Player from the Smith WBB roster to calculate stat for.
 #' @param input_season Specifies season within `input_player`s career to calculate stat for.
 #' @return The true shooting percentage of `input_player` in `input_season`.
+#' @export
 #'
 #' @examples
 #' TS_percentage(player = "Bondi, Lauren", season = "2018-19")
