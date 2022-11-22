@@ -14,7 +14,6 @@
 #'
 #' @examples
 #' perform_players(10, 22, "2021-22")
-
 utils::globalVariables(c("number", "season", "player", "fga"))
 perform_players <- function(player_num1, player_num2, input_season){
   smith_wbb_data <- as.data.frame(apply(smith_wbb_data,2, str_remove_all, "\r\n"))
