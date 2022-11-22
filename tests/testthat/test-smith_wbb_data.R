@@ -3,6 +3,6 @@ testthat::test_that("count number of rows", {
 })
 
 testthat::test_that("Number of columns", {
-  expect_equal (ncol(smith_wbb_data), 27)
+  expect_equal(ncol(smith_wbb_data), 27)
 })
 
