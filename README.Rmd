@@ -41,7 +41,7 @@ You can install `wetried2` from [CRAN](https://cran.r-project.org/) with:
 
 You can install the development version of `wetried2` from [GitHub](https://github.com/) with:
 
-```{r}
+```{r eval=FALSE}
 # install.packages("devtools")
 devtools::install_github("chiqiu23/wetried")
 ```
