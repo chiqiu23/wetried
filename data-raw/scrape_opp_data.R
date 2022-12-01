@@ -235,6 +235,15 @@ dat <- df %>%
   slice_head(n=17)
 data_full <- rbind(dat,data_full)
 
+#specify types
+data_full <- data_full %>%
+  mutate(date = lubridate::mdy(date))
+
+
+#fix date column -- error in 01/04/17 game to say 01/04/07
+data_full[59, "date"] <- lubridate::mdy("01/04/2017")
+
+
 #fix player names col
 #data_full <- data_full %>%
   #mutate(player = sapply(str_split(player, "  "), "[[", 1))
