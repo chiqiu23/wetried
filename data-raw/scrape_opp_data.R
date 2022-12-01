@@ -36,10 +36,11 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+# dat <- df[-1, ] %>%
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2010-11") %>%
   slice_head(n=12)
 data_full <- dat
@@ -55,10 +56,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2011-12") %>%
   slice_head(n=13)
 data_full <- rbind(dat,data_full)
@@ -74,10 +75,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df%>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2012-13") %>%
   slice_head(n=12)
 data_full <- rbind(dat,data_full)
@@ -93,10 +94,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2013-14") %>%
   slice_head(n=11)
 data_full <- rbind(dat,data_full)
@@ -112,10 +113,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2014-15") %>%
   slice_head(n=14)
 data_full <- rbind(dat,data_full)
@@ -131,10 +132,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df%>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2015-16") %>%
   slice_head(n=18)
 data_full <- rbind(dat,data_full)
@@ -150,10 +151,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2016-17") %>%
   slice_head(n=15)
 data_full <- rbind(dat,data_full)
@@ -169,10 +170,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2017-18") %>%
   slice_head(n=14)
 data_full <- rbind(dat,data_full)
@@ -188,10 +189,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2018-19") %>%
   slice_head(n=13)
 data_full <- rbind(dat,data_full)
@@ -207,10 +208,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2019-20") %>%
   slice_head(n=14)
 data_full <- rbind(dat,data_full)
@@ -226,10 +227,10 @@ list_oppStats <- read_html(source) %>%
   html_table()
 
 df <- as.data.frame(list_oppStats[[1]])
-names(df) <- as.matrix(df[1, ])
-dat <- df[-1, ] %>%
+# names(df) <- as.matrix(df[1, ])
+dat <- df %>%
   clean_names() %>%
-  select(-c(bio_link, na)) %>%
+  # select(-c(bio_link, na)) %>%
   mutate(season = "2021-22") %>%
   slice_head(n=17)
 data_full <- rbind(dat,data_full)
