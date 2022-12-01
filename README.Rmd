@@ -80,7 +80,6 @@ TS_percentage(input_player = "Bondi, Lauren", input_season = "2018-19")
 ast_turnover_ratio(input_player = "Pickunka, Katelyn", input_season = "2021-22")
 ```
 
-
 ### Data Visualization
 
 ```{r}
