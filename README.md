@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# wetried
+# wetried2
 
 Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
@@ -115,15 +115,6 @@ perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
-
-## Project Proposals for Phase III
-
-In the project phase III, we will add more Smith College basketball
-team’s data and calculate more advanced stats and any important numbers
-that are useful for evaluating the performance of a basketball game.
-Additionally, we will build more functions that analyze and visualize
-the important stats we generated. For the name of the package, we will
-find a better name by the submission of phase III.
 
 ## Contributors
 

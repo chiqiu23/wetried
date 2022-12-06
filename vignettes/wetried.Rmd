@@ -1,5 +1,5 @@
 ---
-title: "wetried"
+title: "wetried2"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{wetried}
@@ -13,8 +13,6 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-
-# wetried
 
 Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
@@ -115,3 +113,5 @@ perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
 ```
 
 The output of the function shows a histogram that compares the number of field goals attempted made by player number 10 and player number 22, and users can easily read that number 10 (Gleissner, Dashelle) is having less field goals attempted by number 22 (Morrison, Morgan).
+
+
