@@ -1,5 +1,5 @@
 ---
-title: "wetried"
+title: "wetried2"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{wetried}
@@ -14,8 +14,104 @@ knitr::opts_chunk$set(
 )
 ```
 
+Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
+
+## Introduction
+
+The `wetried2` package contains data on Smith College Women Basketball Games for 2010-2022 season (with exception for the 2019-2020 season that was disrupted by the Covid-19 Pandemic).
+
+## Purpose
+
+The purpose of `wetried2` package is to be a Smith College basketball version of the nbastatr package, but in a simpler form. It uses the season totals as provided on the Smith Athletics website and will all for users to calculate advanced stats on their own, such as TS%, and provide visualizations for analysis.
+
+## Target Audience
+
+Users who may be interested in this package would be anyone interested in Smith College's basketball team, as well as anyone interested in sports analytics and specifically basketball analytics. This package also provides a useful way for coaches to learn more about the team and how to improve it.
+
+## Load
+
 ```{r setup}
-library(wetried2)
+library(wetried2) 
 ```
 
-This is my vignette
+## Available Datasets
+
+-   `smith_wbb_data`: dataset of Smith College Women Basketball Games for 2010-2022 season (with exception for the 2019-2020 season that was disrupted by the Covid-19 Pandemic)
+
+## Example of a Dataset
+
+Here's the first 6 rows of the `smith_wbb_data` dataset.
+
+```{r}
+head(smith_wbb_data)
+```
+
+## Available functions
+
+-   `TS_percentage()`: calculate TS% or True Shooting Percentage from the Smith WBB dataset.
+-   `perform_players()`: compare field goals attempted for two selected players across one season
+-   `ast_turnover_ratio()`: calculate the assist to turnover ratio of a player from the Smith WBB dataset.
+
+### Calculate True Shooting Percentage
+
+This function calculates True Shooting Percentage (TS%) from the Smith WBB dataset. The TS% is the shooting percentage adjusted for three-pointers and free throws, and measures a player's efficiency at shooting the ball.
+
+The formula to calculate TS% is: ![](https://www.breakthroughbasketball.com/stats/graphics/tspformula.png){width="187"}
+
+Where:
+
+-   PTS: points scored
+
+-   FGA: field goal attempts
+
+-   FTA: free throw attempts
+
+If Player A has a TS% of 50%, and Player B has a TS% of 60%, it means that Player B shot at a more efficient rate once accounting for the value in their shot selection. And a TS% over 60.0% would be considered as an elite TS%.
+
+Using the `TS_percentage()` function, we can find TS% of the player that we are interested.
+
+-   `input_player`: "Bondi, Lauren", the player interested from the Smith WBB roster to calculate TS% for
+
+-   `input_season`: "2018-19", the season interested within input_player's career to calculate TS% for
+
+```{r}
+TS_percentage(input_player = "Bondi, Lauren", input_season = "2018-19")
+```
+
+The output of the function is given in the percentage form, meaning that the TS% of Lauren Bondi in the season of 2018-19 is 56.037%.
+
+### Calculate Assist to Turnover Ratio Calculation
+
+Assist to Turnover Ratio is the is used to evaluate the ball control and ball handling skills of a player. Specifically, a turnover is counted when a player with possession of the ball loses possession as the result of a violation or an opposing player. An assist is recorded when the player passes the ball to another player who then scores.
+
+Using the `ast_turnover_ratio()` function, we can find Assist Turnover Ratio of the player that we are interested.
+
+-   `input_player`: "Pickunka, Katelyn", the player interested from the Smith WBB roster to calculate Assist to Turnover Ratio for
+
+-   `input_season`: "2021-22", the season interested within input_player's career to calculate Assist to Turnover Ratio for
+
+```{r}
+ast_turnover_ratio(input_player = "Pickunka, Katelyn", input_season = "2021-22")
+```
+
+The output of the function is not given in the percentage form, meaning that the Assist to Turnover Ratio of Katelyn Pickunka in the season of 2021-22 is 46.2963%.
+
+### Compare Field Goals Attempted of Two Players
+
+In basketball, a field goal is a basket scored on any shot or tap other than a free throw, worth two or three points depending on the distance of the attempt from the basket.
+
+Using the `perform_players()` function, users are able to compare the field goals attempted of two players in a specific season.
+
+-   `player_num1`: "10", the number of the first player of interest
+
+-   `player_num2`: "22", the number of the second player of interest
+
+-   `input_season`: "2021-22", the season of interest from the dataset
+
+```{r}
+perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
+```
+
+The output of the function shows a histogram that compares the number of field goals attempted made by player number 10 and player number 22, and users can easily read that number 10 (Gleissner, Dashelle) is having less field goals attempted by number 22 (Morrison, Morgan).
+
+

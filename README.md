@@ -1,16 +1,19 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# wetried
+# wetried2
 
 Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/wetried2)](https://CRAN.R-project.org/package=wetried2)
+[<img
+src="https://img.shields.io/badge/lifecycle-experimental-orange.svg"
+alt="Lifecycle: experimental" />](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[<img src="https://www.r-pkg.org/badges/version/wetried2"
+alt="CRAN status" />](https://CRAN.R-project.org/package=wetried2) [<img
+src="https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml/badge.svg"
+alt="R-CMD-check" />](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
@@ -32,13 +35,6 @@ how to improve it.
 
 ## Installation
 
-You can install `wetried2` from [CRAN](https://cran.r-project.org/)
-with:
-
-``` r
-#install.packages("wetried2")
-```
-
 You can install the development version of `wetried2` from
 [GitHub](https://github.com/) with:
 
@@ -52,7 +48,6 @@ devtools::install_github("chiqiu23/wetried")
 ``` r
 library(wetried2) 
 #> Loading required package: ggplot2
-#> Warning: package 'ggplot2' was built under R version 4.2.2
 #> Loading required package: dplyr
 #> 
 #> Attaching package: 'dplyr'
@@ -99,36 +94,27 @@ head(smith_wbb_data)
 #> #   variable names ¹​fg_percent, ²​x3pt_percent
 ```
 
-### Efficiency Calculation
+### Calculate True Shooting Percentage
 
 ``` r
 TS_percentage(input_player = "Bondi, Lauren", input_season = "2018-19")
 #> [1] 56.037
 ```
 
-### Assist to Turnover Ratio Calculation
+### Calculate Assist to Turnover Ratio Calculation
 
 ``` r
 ast_turnover_ratio(input_player = "Pickunka, Katelyn", input_season = "2021-22")
 #> [1] 0.462963
 ```
 
-### Data Visualization
+### Compare Field Goals Attempted of Two Players
 
 ``` r
 perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
-
-## Project Proposals for Phase III
-
-In the project phase III, we will add more Smith College basketball
-team’s data and calculate more advanced stats and any important numbers
-that are useful for evaluating the performance of a basketball game.
-Additionally, we will build more functions that analyze and visualize
-the important stats we generated. For the name of the package, we will
-find a better name by the submission of phase III.
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ## Contributors
 
