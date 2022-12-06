@@ -11,7 +11,7 @@ library(robotstxt)
 # remDr <- rD[["client"]]
 
 #check if allowed to scrape
-paths_allowed("https://smithpioneers.com/sports/womens-basketball/stats/2010-11") #TRUE , all good
+# paths_allowed("https://smithpioneers.com/sports/womens-basketball/stats/2010-11") #TRUE , all good
 
 ## 2010-11 SEASON
 #opens site in server
@@ -242,5 +242,33 @@ data_full <- data_full %>%
 data_full <- data_full |>
   mutate(player = gsub("[\r\n]", "", player))
 
+#set number and stat cols to numeric (number, gp, gs, tot, avg, fgm, fga, fg_percent, x3pt, x3pta, x3pt_percent,
+# ftm, fta, ft_percent, pts, avg_2, off, def, tot_2, avg_3, pf, ast, to, stl, blk)
+data_full <- data_full |>
+  mutate(number = as.numeric(number),
+         gp = as.numeric(gp),
+         gs = as.numeric(gs),
+         tot = as.numeric(tot),
+         avg = as.numeric(avg),
+         fgm = as.numeric(fgm),
+         fga = as.numeric(fga),
+         fg_percent = as.numeric(fg_percent),
+         x3pt = as.numeric(x3pt),
+         x3pta = as.numeric(x3pta),
+         x3pt_percent = as.numeric(x3pt_percent),
+         ftm = as.numeric(ftm),
+         fta = as.numeric(fta),
+         ft_percent = as.numeric(ft_percent),
+         pts = as.numeric(pts),
+         avg_2 = as.numeric(avg_2),
+         off = as.numeric(off),
+         def = as.numeric(def),
+         tot_2 = as.numeric(tot_2),
+         avg_3 = as.numeric(avg_3),
+         pf = as.numeric(pf),
+         ast = as.numeric(ast),
+         to = as.numeric(to),
+         stl = as.numeric(stl),
+         blk = as.numeric(blk))
 write.csv(data_full, "data-raw/smith_wbb_data.csv", row.names= FALSE)
 

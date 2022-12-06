@@ -11,7 +11,7 @@ library(robotstxt)
 # remDr <- rD[["client"]]
 
 #check if allowed to scrape
-paths_allowed("https://smithpioneers.com/sports/womens-basketball/stats/2010-11") #TRUE , all good
+# paths_allowed("https://smithpioneers.com/sports/womens-basketball/stats/2010-11") #TRUE , all good
 
 ## 2010-11 SEASON
 #opens site in server
@@ -235,7 +235,7 @@ dat <- df %>%
   slice_head(n=17)
 data_full <- rbind(dat,data_full)
 
-#specify types
+#specify date
 data_full <- data_full %>%
   mutate(date = lubridate::mdy(date))
 
@@ -243,11 +243,27 @@ data_full <- data_full %>%
 #fix date column -- error in 01/04/17 game to say 01/04/07
 data_full[59, "date"] <- lubridate::mdy("01/04/2017")
 
+# separate fgm and fga into own cols and remove fgm-a col
 
-#fix fgm_a names col
-data_full <- data_full %>%
-  mutate(fgm_a = sapply(str_split(fgm_a, "-"), "[[", 2))
+# data_full <- data_full %>%
+#   mutate(fgm_a = sapply(str_split(fgm_a, "-"), "[[", 2))
+data_full <- data_full |>
+  mutate(fgm = as.numeric(sapply(str_split(fgm_a, "-"), "[[", 1)),
+         fga = as.numeric(sapply(str_split(fgm_a, "-"), "[[", 2))) |>
+  select(-c(fgm_a)) |>
+  relocate(c(fgm, fga), .after = w_l) |>
+  rename(fg_pct = pct)
 
+#repeat separation for x3fg_a and ftm_a cols
+data_full <- data_full |>
+  mutate(x3fgm = as.numeric(sapply(str_split(x3fg_a, "-"), "[[", 1)),
+         x3fga = as.numeric(sapply(str_split(x3fg_a, "-"), "[[", 2)),
+         ftm = as.numeric(sapply(str_split(ftm_a, "-"), "[[", 1)),
+         fta = as.numeric(sapply(str_split(ftm_a, "-"), "[[", 2))) |>
+  select(-c(x3fg_a, ftm_a)) |>
+  relocate(c(x3fgm, x3fga), .after = fg_pct) |>
+  relocate(c(ftm, fta), .after = pct_2) |>
+  rename(x3fg_pct = pct_2, ft_pct = pct_3)
 
 
 #fix player names col try 2 - remove extra "\r\n" at end of strings in player col
