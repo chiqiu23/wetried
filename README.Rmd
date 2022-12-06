@@ -19,7 +19,7 @@ Names: Chi Qiu, Meaghan Brennan, and Emma Gardecki
 
 <!-- badges: start -->
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg){alt="Lifecycle: experimental"}](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetried2){alt="CRAN status"}](https://CRAN.R-project.org/package=wetried2) [![R-CMD-check](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml/badge.svg){alt="R-CMD-check"}](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml) [![R-CMD-check](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg){alt="Lifecycle: experimental"}](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![CRAN status](https://www.r-pkg.org/badges/version/wetried2){alt="CRAN status"}](https://CRAN.R-project.org/package=wetried2) [![R-CMD-check](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml/badge.svg){alt="R-CMD-check"}](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
