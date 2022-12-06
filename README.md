@@ -35,13 +35,6 @@ how to improve it.
 
 ## Installation
 
-You can install `wetried2` from [CRAN](https://cran.r-project.org/)
-with:
-
-``` r
-#install.packages("wetried2")
-```
-
 You can install the development version of `wetried2` from
 [GitHub](https://github.com/) with:
 
@@ -121,7 +114,7 @@ ast_turnover_ratio(input_player = "Pickunka, Katelyn", input_season = "2021-22")
 perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ## Project Proposals for Phase III
 

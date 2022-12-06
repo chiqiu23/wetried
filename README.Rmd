@@ -33,12 +33,6 @@ Users who may be interested in this package would be anyone interested in Smith 
 
 ## Installation
 
-You can install `wetried2` from [CRAN](https://cran.r-project.org/) with:
-
-```{r}
-#install.packages("wetried2")
-```
-
 You can install the development version of `wetried2` from [GitHub](https://github.com/) with:
 
 ```{r eval=FALSE}
