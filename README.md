@@ -14,7 +14,6 @@ alt="Lifecycle: experimental" />](https://lifecycle.r-lib.org/articles/stages.ht
 alt="CRAN status" />](https://CRAN.R-project.org/package=wetried2) [<img
 src="https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml/badge.svg"
 alt="R-CMD-check" />](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml)
-[![R-CMD-check](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/chiqiu23/wetried/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
