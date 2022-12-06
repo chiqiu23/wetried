@@ -244,9 +244,11 @@ data_full <- data_full %>%
 data_full[59, "date"] <- lubridate::mdy("01/04/2017")
 
 
-#fix player names col
-#data_full <- data_full %>%
-  #mutate(player = sapply(str_split(player, "  "), "[[", 1))
+#fix fgm_a names col
+data_full <- data_full %>%
+  mutate(fgm_a = sapply(str_split(fgm_a, "-"), "[[", 2))
+
+
 
 #fix player names col try 2 - remove extra "\r\n" at end of strings in player col
 #data_full <- data_full |>
