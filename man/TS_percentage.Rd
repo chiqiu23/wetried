@@ -4,7 +4,7 @@
 \alias{TS_percentage}
 \title{Calculate TS\% or True Shooting Percentage from the Smith WBB dataset.}
 \arguments{
-\item{input_player}{Player from the Smith WBB roster to calculate stat for.}
+\item{input_player}{Player name from the Smith WBB roster to calculate stat for.}
 
 \item{input_season}{Specifies season within \code{input_player}s career to calculate stat for.}
 }

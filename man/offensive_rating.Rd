@@ -4,7 +4,7 @@
 \alias{offensive_rating}
 \title{Calculate Offensive Rating from the Smith WBB dataset.}
 \arguments{
-\item{input_player}{Player from the Smith WBB roster to calculate stat for.}
+\item{input_player}{Player name from the Smith WBB roster to calculate stat for.}
 
 \item{input_season}{Specifies season within \code{input_player}s career to calculate stat for.}
 }
@@ -16,9 +16,9 @@ Calculate Offensive Rating from the Smith WBB dataset.
 }
 \examples{
 offensive_rating(input_player = "Bondi, Lauren", input_season = "2018-19")
-# [1]
-player <- "Dornbusch, Abby"
-season <- "2010-11"
+# [1] 129.2734
+player <- "Barrett, Alyssa"
+season <- "2012-13"
 offensive_rating(player, season)
-# [1]
+# [1] 117.226
 }
