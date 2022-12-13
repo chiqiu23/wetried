@@ -22,8 +22,16 @@ utils::globalVariables(c("season", "player", "smith_wbb_data"))
 
 #implementation on a per player, per season basis
 TS_percentage <- function(input_player, input_season) {
+  ## checks input
+  stopifnot(
+    "`input_season` must match ds. run `unique(smith_wbb_data$season)` for available seasons" =
+      match.arg(arg = input_season, choices = unlist(smith_wbb_data$season)) == input_season,
+    "`input_player` must be player number seen in `input_season`" =
+      match.arg(arg = input_player, choices = unlist(filter(smith_wbb_data, season == input_season)$player)) == input_player
+  )
+
   choice <- smith_wbb_data |>
-    subset(season == input_season & player == paste0(input_player, "\r\n"))
+    subset(season == input_season & player == input_player)
   ts_stat <- 100 * (choice$pts/((2 * choice$fga) + (0.88 * choice$fta)))
   return(ts_stat)
 }
