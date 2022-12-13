@@ -65,15 +65,20 @@ library(wetried2)
 -   `smith_wbb_data`: dataset of Smith College Women Basketball Games
     for 2010-2022 season (with exception for the 2019-2020 season that
     was disrupted by the Covid-19 Pandemic)
+-   `smith_oppwbb_data`: dataset of opponents of Smith College Women
+    Basketball Games for 2010-2022 (with exception for the 2019-2020
+    season that was disrupted by the Covid-19 Pandemic)
 
 ## Available functions
 
 -   `TS_percentage()`: calculate TS% or True Shooting Percentage from
-    the Smith WBB dataset.
+    the Smith WBB dataset
 -   `perform_players()`: compare field goals attempted for two selected
     players across one season
 -   `ast_turnover_ratio()`: calculate the assist to turnover ratio of a
-    player from the Smith WBB dataset.
+    player from the Smith WBB dataset
+-   `offensive_rating()`: calculate the offensive rating of a player
+    from the Smith WBB dataset and Opponents’ of Smith WBB dataset
 
 ## Example: 2010-2022 Cumulative Statistics for Smith College Women Basketball Game
 
@@ -81,13 +86,13 @@ library(wetried2)
 head(smith_wbb_data)
 #> # A tibble: 6 × 27
 #>   number player     gp    gs   tot   avg   fgm   fga fg_pe…¹  x3pt x3pta x3pt_…²
-#>   <chr>  <chr>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>   <dbl> <dbl> <dbl>   <dbl>
-#> 1 11     "Picku…    28    28   697  24.9   119   226   0.527     5    12   0.417
-#> 2 14     "Ruffn…    28    28   769  27.5   127   260   0.488    22    55   0.4  
-#> 3 22     "Morri…    28     2   451  16.1   127   204   0.623     0     0   0    
-#> 4 05     "Yamad…    28     6   579  20.7    72   192   0.375    39   120   0.325
-#> 5 25     "Clair…    25    21   542  21.7    69   189   0.365    34   102   0.333
-#> 6 10     "Gleis…    28    28   754  26.9    67   175   0.383    26    82   0.317
+#>    <dbl> <chr>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>   <dbl> <dbl> <dbl>   <dbl>
+#> 1     11 Pickun…    28    28   697  24.9   119   226   0.527     5    12   0.417
+#> 2     14 Ruffne…    28    28   769  27.5   127   260   0.488    22    55   0.4  
+#> 3     22 Morris…    28     2   451  16.1   127   204   0.623     0     0   0    
+#> 4      5 Yamada…    28     6   579  20.7    72   192   0.375    39   120   0.325
+#> 5     25 Clairm…    25    21   542  21.7    69   189   0.365    34   102   0.333
+#> 6     10 Gleiss…    28    28   754  26.9    67   175   0.383    26    82   0.317
 #> # … with 15 more variables: ftm <dbl>, fta <dbl>, ft_percent <dbl>, pts <dbl>,
 #> #   avg_2 <dbl>, off <dbl>, def <dbl>, tot_2 <dbl>, avg_3 <dbl>, pf <dbl>,
 #> #   ast <dbl>, to <dbl>, stl <dbl>, blk <dbl>, season <chr>, and abbreviated
@@ -115,6 +120,32 @@ perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+## Example: 2010-2022 Cumulative Statistics for Opponents of Smith College Women Basketball Game
+
+``` r
+head(smith_oppwbb_data)
+#> # A tibble: 6 × 25
+#>   opponent   date       score w_l     fgm   fga fg_pct x3fgm x3fga x3fg_…¹   ftm
+#>   <chr>      <date>     <chr> <chr> <dbl> <dbl>  <dbl> <dbl> <dbl>   <dbl> <dbl>
+#> 1 Castleton  2021-11-08 57-78 L        18    64  0.281     6    22   0.273    15
+#> 2 Vassar     2021-11-13 55-80 L        20    70  0.286    10    41   0.244     5
+#> 3 Rowan      2021-11-14 55-70 L        23    69  0.333     4    15   0.267     5
+#> 4 Mitchell   2021-11-19 50-69 L        22    73  0.301     3    18   0.167     3
+#> 5 Bowdoin    2021-11-20 69-52 W        27    56  0.482    11    19   0.579     4
+#> 6 Trinity (… 2021-11-28 58-65 L        21    49  0.429     2    12   0.167    14
+#> # … with 14 more variables: fta <dbl>, ft_pct <dbl>, off <dbl>, def <dbl>,
+#> #   tot <dbl>, avg <dbl>, pf <dbl>, ast <dbl>, to <dbl>, blk <dbl>, stl <dbl>,
+#> #   pts <dbl>, avg_2 <dbl>, season <chr>, and abbreviated variable name
+#> #   ¹​x3fg_pct
+```
+
+### Calculate Offensive Rating of the Player
+
+``` r
+offensive_rating(input_player = "Bondi, Lauren", input_season = "2018-19")
+#> [1] 129.2734
+```
 
 ## Contributors
 
