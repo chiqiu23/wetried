@@ -2,6 +2,7 @@
 
 export(TS_percentage)
 export(ast_turnover_ratio)
+export(offensive_rating)
 export(perform_players)
 import(dplyr)
 import(ggplot2)

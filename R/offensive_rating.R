@@ -1,10 +1,26 @@
+#' Calculate Offensive Rating from the Smith WBB dataset.
+#'
+#' @name offensive_rating
+#' @param input_player Player from the Smith WBB roster to calculate stat for.
+#' @param input_season Specifies season within `input_player`s career to calculate stat for.
+#' @return The offensive rating of `input_player` in `input_season`.
+#' @export
+#'
+#' @examples
+#' offensive_rating(input_player = "Bondi, Lauren", input_season = "2018-19")
+#' # [1] 129.2734
+#' player <- "Barrett, Alyssa"
+#' season <- "2012-13"
+#' offensive_rating(player, season)
+#' # [1] 117.226
+
 utils::globalVariables(c("season", "player", "smith_wbb_data"))
 utils::globalVariables(c("season", "smith_oppwbb_data"))
 
 #implementation on a per player, per season basis
 offensive_rating <- function(input_player, input_season) {
   choice <- smith_wbb_data |>
-    subset(season == input_season & player == paste0(input_player, "\r\n"))
+    subset(season == input_season & player == input_player)
   choice2 <- smith_oppwbb_data |>
     subset(season == input_season)
   choice3 <- smith_wbb_data |>
