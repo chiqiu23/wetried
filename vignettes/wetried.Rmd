@@ -114,4 +114,16 @@ perform_players(player_num1 = 10, player_num2 = 22, input_season = "2021-22")
 
 The output of the function shows a histogram that compares the number of field goals attempted made by player number 10 and player number 22, and users can easily read that number 10 (Gleissner, Dashelle) is having less field goals attempted by number 22 (Morrison, Morgan).
 
+### Calculate Offensive Rating of the Player
 
+Offensive rating is the amount of points produced by a player per 100 possessions, and a player is in possession while holding, dribbling or passing the ball. The higher the offensive rating, the better the offensive production.
+
+-   `input_player`: "Bondi, Lauren", the player interested from the Smith WBB roster to calculate Assist to Turnover Ratio for
+
+-   `input_season`: "2018-19", the season interested within input_player's career to calculate Assist to Turnover Ratio for
+
+```{r}
+offensive_rating(input_player = "Bondi, Lauren", input_season = "2018-19")
+```
+
+The output of the function is not given in the percentage form, meaning that the offensive rating for Lauren Bondi in the season of 2018-19 is 129.3.
