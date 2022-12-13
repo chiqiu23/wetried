@@ -25,9 +25,11 @@ TS_percentage <- function(input_player, input_season) {
   ## checks input
   stopifnot(
     "`input_season` must match ds. run `unique(smith_wbb_data$season)` for available seasons" =
-      match.arg(arg = input_season, choices = unlist(smith_wbb_data$season)) == input_season,
+      input_season %in% unlist(smith_wbb_data$season)
+  )
+  stopifnot(
     "`input_player` must be player number seen in `input_season`" =
-      match.arg(arg = input_player, choices = unlist(filter(smith_wbb_data, season == input_season)$player)) == input_player
+      input_player %in% (filter(smith_wbb_data, season == input_season)$player)
   )
 
   choice <- smith_wbb_data |>

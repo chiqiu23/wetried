@@ -23,12 +23,10 @@ offensive_rating <- function(input_player, input_season) {
   stopifnot(
     "`input_season` must match ds. run `unique(smith_wbb_data$season)` for available seasons" =
       input_season %in% unlist(smith_wbb_data$season)
-      # match.arg(arg = input_season, choices = unlist(smith_wbb_data$season)) == input_season
     )
   stopifnot(
     "`input_player` must be player number seen in `input_season`" =
       input_player %in% (filter(smith_wbb_data, season == input_season)$player)
-      # match.arg(arg = input_player, choices = unlist(filter(smith_wbb_data, season == input_season)$player)) == input_player
   )
 
   choice <- smith_wbb_data |>
