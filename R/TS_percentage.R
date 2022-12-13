@@ -1,7 +1,7 @@
 #' Calculate TS% or True Shooting Percentage from the Smith WBB dataset.
 #'
 #' @name TS_percentage
-#' @param input_player Player from the Smith WBB roster to calculate stat for.
+#' @param input_player Player name from the Smith WBB roster to calculate stat for.
 #' @param input_season Specifies season within `input_player`s career to calculate stat for.
 #' @return The true shooting percentage of `input_player` in `input_season`.
 #' @export

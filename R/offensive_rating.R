@@ -1,7 +1,7 @@
 #' Calculate Offensive Rating from the Smith WBB dataset.
 #'
 #' @name offensive_rating
-#' @param input_player Player from the Smith WBB roster to calculate stat for.
+#' @param input_player Player name from the Smith WBB roster to calculate stat for.
 #' @param input_season Specifies season within `input_player`s career to calculate stat for.
 #' @return The offensive rating of `input_player` in `input_season`.
 #' @export
@@ -19,6 +19,14 @@ utils::globalVariables(c("season", "smith_oppwbb_data"))
 
 #implementation on a per player, per season basis
 offensive_rating <- function(input_player, input_season) {
+  #input checks
+  stopifnot(
+    "`input_season` must match ds. run `unique(smith_wbb_data$season)` for available seasons" =
+      match.arg(arg = input_season, choices = unlist(smith_wbb_data$season)) == input_season,
+    "`input_player` must be player number seen in `input_season`" =
+      match.arg(arg = input_player, choices = unlist(filter(smith_wbb_data, season == input_season)$player)) == input_player
+  )
+
   choice <- smith_wbb_data |>
     subset(season == input_season & player == input_player)
   choice2 <- smith_oppwbb_data |>
